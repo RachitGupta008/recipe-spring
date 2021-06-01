@@ -2,6 +2,7 @@ package com.learning.springrecipe.model;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Set;
 
 @Entity
 public class Ingredient {
@@ -10,6 +11,8 @@ public class Ingredient {
     private Long id;
     private String description;
     private BigDecimal amount;
+
+
 
     @OneToOne
     private UnitOfMeasure unitOfMeasure;
