@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Slf4j
 @Controller
-public class IndexController {
+public class IndexController  {
 
     private final RecipeService recipeService;
 
@@ -22,6 +22,7 @@ public class IndexController {
     @RequestMapping({"", "/", "/index"})
     public String getIndexPage(Model model) {
         log.debug("Getting Index page");
+        assert(5>0);
 
         model.addAttribute("recipes", recipeService.getRecipes());
 
